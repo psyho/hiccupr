@@ -31,8 +31,6 @@ describe Hiccupr::TagExtractor do
   end
 
   def attr_extractor(char)
-    fake = Bogus.fake_for(:attribute_extractor)
-    stub(fake).character{ char }
-    fake
+    fake(:attribute_extractor, character: char)
   end
 end
